@@ -2,11 +2,34 @@
 <html>
 <head>
     <title></title>
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        #map {
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
 
+    <div id='map'></div>
+
+    <script>
+        var map;
+        function initMap() {
+            //Constructor creates a new map - only center and zoom are required.
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 40.7413549, lng: -73.9980244},
+                zoom: 13
+            });
+        }
+    </script>
+
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=maps-api-fend-course&v=3&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvuITrVNeJb2d-iitT0s_ulfw8kc-CQJM&v=3&callback=initMap">
     </script>
 
 </body>
