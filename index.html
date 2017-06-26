@@ -165,6 +165,10 @@
                 //Make sure the search is re-done if the poly is changed
                 polygon.getPath().addListener('set_at', searchWithinPolygon);
                 polygon.getPath().addListener('insert_at', searchWithinPolygon);
+
+                //Calculate and display the area of the user selected polygon.
+                var area = google.maps.geometry.spherical.computeArea(polygon.getPath());
+                window.alert(area + ' SQUARE METERS');
             });
         }
 
