@@ -117,6 +117,19 @@
                 mapTypeControl: true
             });
 
+            //COOOOOOLLL!!!
+            //See the documentation for autocomplete options and other cool stuff @
+            //https://developers.google.com/maps/documentation/javascript/places-autocomplete
+
+            //This autocomplete is for use in the search within time entry boc
+            var timeAutoComplete = new google.maps.places.Autocomplete(
+                document.getElementById('search-within-time-text'));
+            //This autocomplete is for use in the geocoder entry box
+            var zoomAutoComplete = new google.maps.places.Autocomplete(
+                document.getElementById('zoom-to-area-text'));
+            //Bias the boundaries within the map for the zoom to area text.
+            zoomAutoComplete.bindTo('bounds', map);
+
             //Need to learn to do this fetching JSON or a dataset from somewhere...eventually my own
             //server side DB
             var locations = [
