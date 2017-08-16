@@ -1,4 +1,4 @@
-# FEND Google Maps Walktrhough
+# FEND Google Maps Walkthrough
 
 #### Installation
 
